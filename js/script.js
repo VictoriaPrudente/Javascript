@@ -1,11 +1,13 @@
 //declaración de funciones
 function hello(){ //funcion bienvenida
+    let nombre = prompt("Primero, ingresá tu nombre.");
+    let apellido = prompt("Y, ahora, tu apellido.");
     if ((nombre && apellido) != ""){
         alert (
-            "Hola, " + nombre + " " + apellido + ". Bienvenido/a a un test de matemáticas fácil de realizar. "
+            "Hola, " + nombre + " " + apellido + ". Bienvenido/a al test psicológico del bosque."
             );
         alert (
-            nombre + ", Los exámenes SAT se utilizan en EEUU para determinar la admisión en las universidades. Hemos seleccionado las preguntas más fáciles sobre matemáticas para ponerte a prueba... ¡Ánimo! "
+            nombre + ", anota la primera respuesta que te venga a la mente puesto que es muy importante descubrir lo que piensa nuestro subconsciente, si le damos demasiadas vueltas es probable que acabe respondiendo la parte más consciente de nuestra mente.  "
         );
     } else while (nombre === "") {
         let error = "Tenés que ingresar un nombre y un apellido.";
@@ -13,237 +15,159 @@ function hello(){ //funcion bienvenida
         nombre = prompt("Ingresá tu nombre");
         apellido = prompt("Ingresá tu apellido");
     }
+    return nombre;
 }
 
-
 function pregunta1(){
-    let respuesta1;
-    do{
-        respuesta1 = prompt(
-            "1) Hay 5 estuches en la mesa. Cada uno contiene como mínimo 10 lápices y como máximo 14. ¿Cuál de estos podría ser el total de lápices?"
-            + "\n a. 45"
-            + "\n b. 75"
-            + "\n c. 65"
-            + "\n d. 35".toLowerCase()
-        );
-    }while (respuesta1 !== "a" && respuesta1 !== "b" && respuesta1 !== "d") {
-        alert ("Debe elegir una de las opciones especificadas.");
-    }  
-    if (prespuesta1 == "c") {
-        alert("¡Tu respuesta fue correcta! Ganaste un punto.");
-        let puntajeCorr = 1;
-        return puntajeCorr;
-    } else {
-        alert("Tu respuesta fue incorrecta.");
-        let puntajeErr = 0;
-        return puntajeErr;
-    }    
+    let respuesta1 = prompt(
+        "Vas a darte un paseo por el bosque: ¿cómo es el camino? \n¿la vegetación está ordenada y el camino parece recto?"
+    );
+    while (respuesta1 === "") {
+        respuesta1= prompt (
+            "Tenés que ingresar una respuesta válida. \n \nVas a darte un paseo por el bosque: ¿cómo es el camino? \n¿la vegetación está ordenada y el camino parece recto? "
+            );
+    }
+    return respuesta1; 
 }
 
 function pregunta2(){
-    let pregunta2 = prompt(
-        "2) Si X es menor que Y por una diferencia de 6 e Y es el doble de Z, ¿cuál es el valor de X cuando Z es igual a 2?"
-        + "\n a. 5"
-        + "\n b. -2"
-        + "\n c. 8"
-        + "\n d. 10".toLowerCase()
+    let respuesta2 = prompt(
+        "¿Estás caminando solo/a o acompañado/a? \n¿quién te acompaña?"
     );
-
-    if (pregunta2 == "b") {
-        alert("¡Tu respuesta fue correcta! Ganaste un punto.");
-        let puntajeCorr = 1;
-        return puntajeCorr;
-    } else {
-        alert("Tu respuesta fue incorrecta.");
-        let puntajeErr = 0;
-        return puntajeErr;
-    }   
-}   
-
+    while (respuesta2 === "") {
+        respuesta2= prompt (
+            "Tenés que ingresar una respuesta válida. \n \n¿Estás caminando solo/a o acompañado/a? \n¿quién te acompaña?"
+            );
+    }
+    return respuesta2;
+}  
 
 function pregunta3(){
-    let pregunta3 = prompt(
-        "3) Si David tiene el doble de monedas de 5 centavos que Tomás y Tomás tiene 15 monedas de 5 centavos más que Juan, ¿cuántos pesos tiene David si Juan tiene 6 monedas de cinco centavos?"
-        + "\n a. 2,10"
-        + "\n b. 42"
-        + "\n c. 21"
-        + "\n d. 14".toLowerCase()
-    );
-
-    if (pregunta3 == "a") {
-        alert("¡Tu respuesta fue correcta! Ganaste un punto.");
-        let puntajeCorr = 1;
-        return puntajeCorr;
-    } else {
-        alert("Tu respuesta fue incorrecta.");
-        let puntajeErr = 0;
-        return puntajeErr;
-    }   
+    let respuesta3 = prompt(
+        "De pronto, te encuentras con un animal: ¿qué animal es?"
+    ); 
+    while (respuesta3 === "") {
+        respuesta3= prompt (
+            "Tenés que ingresar una respuesta válida. \n \nDe pronto, te encuentras con un animal: ¿qué animal es?"
+            );
+    }
+    return respuesta3;
 } 
 
 function pregunta4(){
-    let pregunta4 = prompt(
-        "4) Lisa recibió un cheque regalo de 100 pesos por su cumpleaños. Se compró unas deportivas que costaban 30 pesos, un vestido de 23 pesos y dos libros de 17 pesos. ¿Cuánto dinero le quedó en el cheque regalo?"
-        + "\n a. 30"
-        + "\n b. 70"
-        + "\n c. 45"
-        + "\n d. 13".toLowerCase()
+    let respuesta4 = prompt(
+        "¿Cómo te relacionas con él? En este apartado es importante que describas bien tu interacción con el animal."
     );
-
-    if (pregunta4 == "d") {
-        alert("¡Tu respuesta fue correcta! Ganaste un punto.");
-        let puntajeCorr = 1;
-        return puntajeCorr;
-    } else {
-        alert("Tu respuesta fue incorrecta.");
-        let puntajeErr = 0;
-        return puntajeErr;
-    }   
+    while (respuesta4 === "") {
+        respuesta4= prompt (
+            "Tenés que ingresar una respuesta válida. \n \n¿Cómo te relacionas con él? En este apartado es importante que describas bien tu interacción con el animal."
+            );
+    }
+    return respuesta4;
 } 
 
 function pregunta5(){
-    let pregunta5 = prompt(
-        "5) Cada estudiante puede elegir entre 4 tipos de sudadera y tres tipos de pantalones en su uniforme, ¿cuántas combinaciones posibles existen?"
-        + "\n a. 10"
-        + "\n b. 24"
-        + "\n c. 12"
-        + "\n d. 7".toLowerCase()
+    let respuesta5 = prompt(
+        "Sigues caminando por el bosque y de pronto el camino se abre. A lo lejos puedes ver una casa encantadora, la casa de tus sueños. ¿Cómo es esa casa? Describe su tamaño, el número de ventanas y si tiene rejas o no. "
     );
-
-    if (pregunta5 == "c") {
-        alert("¡Tu respuesta fue correcta! Ganaste un punto.");
-        let puntajeCorr = 1;
-        return puntajeCorr;
-    } else {
-        alert("Tu respuesta fue incorrecta.");
-        let puntajeErr = 0;
-        return puntajeErr;
-    }   
+    while (respuesta5 === "") {
+        respuesta5= prompt (
+            "Tenés que ingresar una respuesta válida. \n \nSigues caminando por el bosque y de pronto el camino se abre. A lo lejos puedes ver una casa encantadora, la casa de tus sueños. ¿Cómo es esa casa? Describe su tamaño, el número de ventanas y si tiene rejas o no. "
+            );
+    }
+    return respuesta5;
 } 
 
 function pregunta6(){
-    let pregunta6 = prompt(
-        "6) 3 (x-4) = 18. ¿Cuál es el valor de X?"
-        + "\n a. 6"
-        + "\n b. 14/3"
-        + "\n c. 22/3"
-        + "\n d. 10".toLowerCase()
+    let respuesta6 = prompt(
+        "Decides entrar en la casa, sin miedo. Avanzas y la primera habitación que te encuentras es el salón. Dicho salón tiene una mesa en medio. ¿Cómo es la mesa? ¿Qué hay encima y alrededor de ella?"
     );
-
-    if (pregunta6 == "d") {
-        alert("¡Tu respuesta fue correcta! Ganaste un punto.");
-        let puntajeCorr = 1;
-        return puntajeCorr;
-    } else {
-        alert("Tu respuesta fue incorrecta.");
-        let puntajeErr = 0;
-        return puntajeErr;
-    }   
+    while (respuesta6 === "") {
+        respuesta6= prompt (
+            "Tenés que ingresar una respuesta válida. \n \nDecides entrar en la casa, sin miedo. Avanzas y la primera habitación que te encuentras es el salón. Dicho salón tiene una mesa en medio. ¿Cómo es la mesa? ¿Qué hay encima y alrededor de ella?"
+            );
+    }
+    return respuesta6;
 } 
 
 function pregunta7(){
-    let pregunta7 = prompt(
-        "7) Cecilia, Roberto y Braulio han comprado sellos. El total de sellos de Cecilia es de un solo dígito. Solo uno de los chicos tiene un número de sellos divisible por tres. Solo uno ha adquirido un número de sellos par. ¿Cuál de estas respuestas puede indicar la cantidad correcta de sellos de cada uno?"
-        + "\n a. 9, 10, 13"
-        + "\n b. 5, 15, 18"
-        + "\n c. 6, 9, 12"
-        + "\n d. 7, 9, 17".toLowerCase()
+    let respuesta7 = prompt(
+        "Avanzas y terminas saliendo de la casa por la puerta de atrás, antes de irte te das cuenta de que alguien se ha dejado una taza en el suelo. ¿De qué material es la taza? ¿Qué haces con esa taza?"
     );
-
-    if (pregunta7 == "a") {
-        alert("¡Tu respuesta fue correcta! Ganaste un punto.");
-        let puntajeCorr = 1;
-        return puntajeCorr;
-    } else {
-        alert("Tu respuesta fue incorrecta.");
-        let puntajeErr = 0;
-        return puntajeErr;
-    }   
+    while (respuesta7 === "") {
+        respuesta7= prompt (
+            "Tenés que ingresar una respuesta válida. \n \nAvanzas y terminas saliendo de la casa por la puerta de atrás, antes de irte te das cuenta de que alguien se ha dejado una taza en el suelo. ¿De qué material es la taza? ¿Qué haces con esa taza?"
+            );
+    }
+    return respuesta7;
 } 
 
 function pregunta8(){
-    let pregunta8 = prompt(
-        "8) Fran ha comprado varias cometas y cada una costaba 16 pesos. Ricardo compró otras distintas y gastó 20 pesos en cada una. Si el ratio en la cantidad de cometas entre las de Fran y las de Ricardo es de 3 a 2, ¿cuál es el coste medio de una cometa de las compradas por los dos?"
-        + "\n a. 16,8"
-        + "\n b. 17,8"
-        + "\n c. 17,6"
-        + "\n d. 18".toLowerCase()
+    let respuesta8 = prompt(
+        "Dejas atrás la casa y vuelves al bosque, al adentrarte un poco descubres que hay un cuerpo de agua que te impide seguir adelante. ¿Qué cuerpo de agua es? ¿Cómo lo haces para cruzarlo? "
     );
-
-    if (pregunta8 == "c") {
-        alert("¡Tu respuesta fue correcta! Ganaste un punto.");
-        let puntajeCorr = 1;
-        return puntajeCorr;
-    } else {
-        alert("Tu respuesta fue incorrecta.");
-        let puntajeErr = 0;
-        return puntajeErr;
-    }    
+    while (respuesta8 === "") {
+        respuesta8= prompt (
+            "Tenés que ingresar una respuesta válida. \n \nDejas atrás la casa y vuelves al bosque, al adentrarte un poco descubres que hay un cuerpo de agua que te impide seguir adelante. ¿Qué cuerpo de agua es? ¿Cómo lo haces para cruzarlo? "
+            );
+    }
+    return respuesta8;
 } 
 
 function pregunta9(){
-    let pregunta9 = prompt(
-        "9) 4 x 4 - 4 + 4 x 4 = ¿...?"
-        + "\n a. 64"
-        + "\n b. 28"
-        + "\n c. -4"
-        + "\n d. -16".toLowerCase()
+    let respuesta9 = prompt(
+        "Has llegado al final del camino y ya no queda más bosque por recorrer, ¿mirarías hacia atrás? "
     );
+    while (respuesta9 === "") {
+        respuesta9= prompt (
+            "Tenés que ingresar una respuesta válida. \n \nHas llegado al final del camino y ya no queda más bosque por recorrer, ¿mirarías hacia atrás? "
+            );
+    }
+    return respuesta9;
+}   
 
-    if (pregunta9 == "b") {
-        alert("¡Tu respuesta fue correcta! Ganaste un punto.");
-        let puntajeCorr = 1;
-        return puntajeCorr;
-    } else {
-        alert("Tu respuesta fue incorrecta.");
-        let puntajeErr = 0;
-        return puntajeErr;
-    }   
-} 
+//Ejecución
+let namee = hello();
+let respuesta1 = pregunta1();
+let respuesta2 = pregunta2();
+let respuesta3 = pregunta3();
+let respuesta4 = pregunta4();
+let respuesta5 = pregunta5();
+let respuesta6 = pregunta6();
+let respuesta7 = pregunta7();
+let respuesta8 = pregunta8();
+let respuesta9 = pregunta9();
 
-function pregunta10(){
-    let pregunta10 = prompt(
-        "10) Si x+3= y, ¿cuánto es 2x + 6?"
-        + "\n a. y"
-        + "\n b. No se puede determinar."
-        + "\n c. 4y"
-        + "\n d. 2y".toLowerCase()
-    );
+alert(namee + ", una vez recorrido todo el camino imaginario y finalizado el test psicoanalítico del bosque, llega el momento de interpretar nuestras respuestas y descubrir qué es lo que esconde nuestro inconsciente:");
+alert ("El camino inicial del bosque. " 
+        + "\n Tu respuesta fue: "+ respuesta1 
+        + "\n Representa el modo en el que ves el mundo que te rodea, si los árboles forman un caminito ordenado significa que ves que tu vida va en la dirección que deseas y vislumbras tu futuro de una manera positiva.");
+alert ("La persona que te acompaña en el camino. " 
+        + "\n Tu respuesta fue: "+ respuesta2 
+        + "\n Es aquella que quieres que esté a tu lado en todo momento, es la persona más importante de tu vida a día de hoy. Si por lo contrario has decidido caminar solo/a, significa que no ves que nadie pueda acompañarte en esta etapa de tu vida. ");
+alert ("El animal que te encuentras." 
+    + "\n Tu respuesta fue: "+ respuesta3 
+    + "\n Es la representación irracional de tus problemas: no importa como es el animal en la realidad, importa cómo te lo has imaginado. El tamaño y la agresividad que representaba son dos de los elementos más importantes.");
+alert ("El modo en el que interaccionas con el animal." 
+    + "\n Tu respuesta fue: "+ respuesta4 
+    + "\n Es un indicador de cómo resuelves tus problemas. Si el animal te atacaba probablemente significa que sientes que tus problemas dañan tu estabilidad mental, si tu interacción se basa en el trato y la comprensión probablemente signifique que tratas de resolver tus conflictos de forma asertiva. Finalmente, si tu decisión ha sido ignorar al animal, representa que intentas evitar enfrentarte a los obstáculos de la vida. ");
+alert ("El tamaño de la casa." 
+    + "\n Tu respuesta fue: "+ respuesta5 
+    + "\n Representa las ambiciones y capacidades para resolver contratiempos, si tiene muchas ventanas refleja una alta extraversión. En cambio, si tiene pocas ventanas y verjas suele ser señal de inseguridad y timidez. ");
+alert ("La mesa." 
+    + "\n Tu respuesta fue: "+ respuesta6 
+    + "\n Si la mesa no estaba rodeada de personas y no había comida o flores en ella suele significar que no estás disfrutando de la vida o que, en este preciso instante, eres infeliz. ");
+alert ("El material de la taza que te has encontrado en el suelo." 
+    + "\n Tu respuesta fue: "+ respuesta7 
+    + "\n Representa cómo ves la relación con la persona de la primera pregunta: si la taza es de hierro o cerámica significa que ves una relación duradera y estable, si te has imaginado una taza de plástico o de papel indica que percibes poca estabilidad en la relación. Lo que has decidido hacer con la taza es una representación inconsciente de lo que quiere hacer con la relación con la persona de la primera pregunta. ");
+alert ("La naturaleza del cuerpo de agua y su envergadura." 
+    + "\n Tu respuesta fue: "+ respuesta8 
+    + "\n (Un río caudaloso o un pequeño embalse) representa el tamaño y la intensidad de tu deseo sexual. Si decides mojarte para atravesar el cuerpo significa que le das mucha importancia al sexo en tu vida. ");
+alert ("Mirar hacia atrás al finalizar tu camino." 
+    + "\n Tu respuesta fue: "+ respuesta9 
+    + "\n Finalmente, si has decidido mirar hacia atrás al finalizar tu camino puede significar dos cosas: en primer lugar, le das mucha importancia al pasado y, en segundo lugar, esperas tener todo aquello que has vislumbrado durante el camino. ");
 
-    if (pregunta10 == "d") {
-        alert("¡Tu respuesta fue correcta! Ganaste un punto.");
-        let puntajeCorr = 1;
-        return puntajeCorr;
-    } else {
-        alert("Tu respuesta fue incorrecta.");
-        let puntajeErr = 0;
-        return puntajeErr;
-    }    
-} 
-
-function resultadoFinal (){
-    let suma = (pregunta1 + pregunta2 + pregunta3 + pregunta4 + pregunta5 + pregunta6 + pregunta7 + pregunta8 + pregunta9 + pregunta10)
-    alert ("Tu resultado final es de: " + suma)
-}
-
-//Declaración de variables
-let nombre = prompt("Primero, ingresá tu nombre.");
-let apellido = prompt("Y, ahora, tu apellido.");
-
-//llamadas
-hello()
-pregunta1()
-pregunta2()
-pregunta3()
-pregunta4()
-pregunta5()
-pregunta6()
-pregunta7()
-pregunta8()
-pregunta9()
-pregunta10()
-resultadoFinal()
-
+alert("Has finalizado el Test del bosque. \n Dicho test nos hace pensar acerca de nuestros problemas y cómo nos enfrentamos a ellos. Tal vez, el resultado te haya resultado extraño. Lo importante es tomarse un tiempo después de realizarlo para pensar acerca de nuestras respuestas. Es importante comentar que las técnicas del psicoanálisis no están validadas como herramientas diagnósticas, por lo tanto, si creemos que tenemos algún tipo de psicopatología o problema en nuestra salud mental, será primordial acudir a un especialista.")
 
 
 
